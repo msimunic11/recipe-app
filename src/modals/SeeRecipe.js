@@ -4,10 +4,14 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 const RecipePopup = ({modal2, toggle2, taskObj}) => {
     const [taskName, setTaskName] = useState('');
     const [description, setDescription] = useState('');
+    const [sastojci, setSastojci] = useState('');
+    
 
     useEffect(() => {
         setTaskName(taskObj.Name)
         setDescription(taskObj.Description)
+        setSastojci(taskObj.Sastojci)
+       
     },[])
 
    
@@ -24,6 +28,10 @@ const RecipePopup = ({modal2, toggle2, taskObj}) => {
                     <div className = "form-group">
                         <label><b>Opis:</b></label>
                         <label>{description} </label>
+                    </div>
+                    <div className = "form-group">
+                        <label><b>Sastojci:</b></label>
+                        <label> </label>
                     </div>
                 
             </ModalBody>

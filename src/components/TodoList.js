@@ -3,6 +3,8 @@ import CreateTask from '../modals/CreateTask'
 import Card from './Card';
 import ReactTooltip from 'react-tooltip';
 
+
+
 const TodoList = () => {
     const [modal, setModal] = useState(false);
     const [taskList, setTaskList] = useState([])
@@ -48,6 +50,7 @@ const TodoList = () => {
 
     return (
         <>
+        
                <div class="navbar">
                    <ul className="nav">
                        <li className="navbar-brand">MOJI RECEPTI</li>
@@ -84,12 +87,13 @@ const TodoList = () => {
             
 
 
-
+            
             <footer class="footer">
   <div class="container-fluid">
-    Intelektualno vlasništvo MŠ ;)
+    Footer
   </div>
 </footer>
+
         </>
     );
 };
