@@ -8,7 +8,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 const CreateTaskPopup = ({modal, toggle, save}) => {
     const [taskName, setTaskName] = useState('');
     const [description, setDescription] = useState('');
-    const [sastojci, setSastojci] = useState('');
+    const [Sastojak, setSastojak] = useState('');
     const [form, setForm] = useState([]);
 
     const handleChange = (e) => {
@@ -19,12 +19,10 @@ const CreateTaskPopup = ({modal, toggle, save}) => {
             setTaskName(value)
         }else{
             setDescription(value)
-            
+            setSastojak(value)
         }
       
         
-
-
     }
 
     const handleSave = (e) => {
@@ -32,7 +30,7 @@ const CreateTaskPopup = ({modal, toggle, save}) => {
         let taskObj = {}
         taskObj["Name"] = taskName
         taskObj["Description"] = description
-        taskObj["Sastojci"] = sastojci
+        taskObj["Sastojak"] = Sastojak
         
         save(taskObj)
 
@@ -168,7 +166,7 @@ const CreateTaskPopup = ({modal, toggle, save}) => {
                     : "form-control"
                 }
                 name="Količina"
-                placeholder="Količina"
+                placeholder="kg/l/g/ml"
                 value={item.Količina}
                 onChange={(e) => onChange(index, e)}
               />

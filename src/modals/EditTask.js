@@ -143,7 +143,7 @@ const EditTaskPopup = ({modal, toggle, updateTask, taskObj, save}) => {
           <form>
 {form.map((item, index) => (
 <div className="row" key={`item-${index}`}>
-  <div className="col-5">
+  <div className="col-6">
     <input
       type="text"
       className={
@@ -162,7 +162,7 @@ const EditTaskPopup = ({modal, toggle, updateTask, taskObj, save}) => {
     )}
   </div>
 
-  <div className="col-5">
+  <div className="col-6">
     <input
       type="text"
       className={
@@ -171,7 +171,7 @@ const EditTaskPopup = ({modal, toggle, updateTask, taskObj, save}) => {
           : "form-control"
       }
       name="Količina"
-      placeholder="Količina"
+      placeholder="kg/l/g/ml"
       value={item.Količina}
       onChange={(e) => onChange(index, e)}
     />

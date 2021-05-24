@@ -4,13 +4,13 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 const RecipePopup = ({modal2, toggle2, taskObj}) => {
     const [taskName, setTaskName] = useState('');
     const [description, setDescription] = useState('');
-    const [sastojci, setSastojci] = useState('');
+    const [Sastojak, setSastojak] = useState('');
     
 
     useEffect(() => {
         setTaskName(taskObj.Name)
         setDescription(taskObj.Description)
-        setSastojci(taskObj.Sastojci)
+        setSastojak(taskObj.Sastojak)
        
     },[])
 

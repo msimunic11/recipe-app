@@ -1,5 +1,6 @@
 *{margin:0;
-  padding: 10px;
+  padding: 0px;
+  font-family: 'Montserrat', sans-serif;
 }
 .header{
   height: 100px;
@@ -12,6 +13,7 @@
 
 i.fas.fa-plus-circle.fa-3x{
   color:orange;
+  margin-top: 20px;
 }
 
 i:hover{
@@ -25,14 +27,16 @@ h3{
   height: 300px;
   width: 300px;
   box-shadow: 0px 3px 10px #A5A5A5;
+  
 }
 
 .card-wrapper{
   width: 270px; 
   height: 200px; 
-  box-shadow: 0px 3px 10px #A5A5A5;
+  box-shadow: 0px 3px 7px #A5A5A5;
   margin:5px;
   flex-direction: column;
+  
   
   
 }
@@ -69,17 +73,20 @@ h3{
 }
 .navbar-nav {
 -ms-flex-direction: row !important;
-  flex-direction: row !important;}
+  flex-direction: row !important;
+padding:20px;}
 
   .navbar{
-    box-shadow: orange 0px 2px 0px 0px;
+    background-color: orange;
+    box-shadow: 0 8px 6px -6px #b7b7b7;
+    
   }
 
   .navbar-brand{
-    color:orange;
-    
+    color:white;
+    padding-left:40px;
   }
- 
+
  .close span{
     color:gray;
     font-size:25px;
@@ -96,10 +103,17 @@ h3{
       padding:0px;
  }
 i{
-  color: orange;
+  color: white;
+  padding:10px
 }
 i:hover{
   color:#80cc61;
+}
+a{
+padding: 20px;
+}
+.bg-light{
+  height:200px;
 }
   @media only screen and (max-width: 600px) {
     .task-container{
