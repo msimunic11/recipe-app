@@ -6,6 +6,7 @@ const RecipePopup = ({modal2, toggle2, taskObj}) => {
     const [description, setDescription] = useState('');
     const [Sastojak, setSastojak] = useState('');
     
+    
 
     useEffect(() => {
         setTaskName(taskObj.Name)
@@ -31,7 +32,8 @@ const RecipePopup = ({modal2, toggle2, taskObj}) => {
                     </div>
                     <div className = "form-group">
                         <label><b>Sastojci:</b></label>
-                        <label> </label>
+                        <ol> {Sastojak}
+                        </ol>
                     </div>
                 
             </ModalBody>

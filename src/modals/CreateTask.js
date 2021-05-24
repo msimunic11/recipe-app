@@ -8,7 +8,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 const CreateTaskPopup = ({modal, toggle, save}) => {
     const [taskName, setTaskName] = useState('');
     const [description, setDescription] = useState('');
-    const [Sastojak, setSastojak] = useState('');
+    const [sastojak, setSastojak] = useState('');
     const [form, setForm] = useState([]);
 
     const handleChange = (e) => {
@@ -19,10 +19,8 @@ const CreateTaskPopup = ({modal, toggle, save}) => {
             setTaskName(value)
         }else{
             setDescription(value)
-            setSastojak(value)
+            
         }
-      
-        
     }
 
     const handleSave = (e) => {
@@ -30,7 +28,7 @@ const CreateTaskPopup = ({modal, toggle, save}) => {
         let taskObj = {}
         taskObj["Name"] = taskName
         taskObj["Description"] = description
-        taskObj["Sastojak"] = Sastojak
+        taskObj["Sastojak"] = sastojak
         
         save(taskObj)
 
@@ -114,6 +112,8 @@ const CreateTaskPopup = ({modal, toggle, save}) => {
     
         setForm((prev) => prev.filter((item) => item !== prev[index]));
       };
+
+      
     
       return(
         <Modal isOpen={modal} toggle={toggle}>
@@ -129,13 +129,14 @@ const CreateTaskPopup = ({modal, toggle, save}) => {
                         <label>Opis</label>
                         <textarea rows = "3" className = "form-control" value = {description} onChange = {handleChange} name = "description"></textarea>
                     </div>
+            
                     
                     <div className="form-group">
       
 
       
                 <label>Sastojci</label>
-                    <form>
+                <div className = "form-group">
         {form.map((item, index) => (
           <div className="row" key={`item-${index}`}>
             <div className="col-5">
@@ -182,6 +183,7 @@ const CreateTaskPopup = ({modal, toggle, save}) => {
             >
               x
             </button>
+            
             </div>
           </div>
         ))}
@@ -189,7 +191,7 @@ const CreateTaskPopup = ({modal, toggle, save}) => {
         <button className="btn btn-primary mt-2" onClick={handleAddLink}>
           Dodaj sastojak
         </button>
-      </form>   
+        </div> 
       </div>
       
       

@@ -51,15 +51,15 @@ const TodoList = () => {
     return (
         <>
         
-               <div class="navbar">
+               <div className="navbar">
                    <ul className="nav">
                        <li className="navbar-brand">MOJI RECEPTI</li>
                        </ul>
                      
-                       <ul class="navbar-nav mr-auto">
-                       <a href="#top"><li className="right"><i class="fas fa-heart"></i></li></a>
-                       <a href="#top"><li className="right"><i class="fas fa-user"></i></li></a>
-                       <a href="#top"><li className="right"><i class="fas fa-sign-in-alt"></i></li></a>
+                       <ul className="navbar-nav mr-auto">
+                       <a href="#top"><li className="right"><i className="fas fa-heart"></i></li></a>
+                       <a href="#top"><li className="right"><i className="fas fa-user"></i></li></a>
+                       <a href="#top"><li className="right"><i className="fas fa-sign-in-alt"></i></li></a>
                        
                    </ul>
                    
@@ -67,10 +67,10 @@ const TodoList = () => {
                </div>
                
         
-                            <div class="col text-center">
+                            <div className="col text-center">
                             
 
-                            <i class = "fas fa-plus-circle fa-3x" data-tip data-for="dodajrecept" onClick = {() => setModal(true)} />
+                            <i className = "fas fa-plus-circle fa-3x" data-tip data-for="dodajrecept" onClick = {() => setModal(true)} />
                             <ReactTooltip id='dodajrecept' type='success'>
   <span>Dodaj recept</span>
 </ReactTooltip>
@@ -88,8 +88,8 @@ const TodoList = () => {
 
 
             
-            <footer class="bg-light text-center text-lg-start mt-5">
-  <div class="text-center p-5">
+            <footer className="bg-light text-center text-lg-start mt-5">
+  <div className="text-center p-5">
   Moji recepti © 2021 Copyright 
   </div>
 </footer>

@@ -143,7 +143,7 @@ const EditTaskPopup = ({modal, toggle, updateTask, taskObj, save}) => {
           <form>
 {form.map((item, index) => (
 <div className="row" key={`item-${index}`}>
-  <div className="col-6">
+  <div className="col-5">
     <input
       type="text"
       className={
@@ -162,7 +162,7 @@ const EditTaskPopup = ({modal, toggle, updateTask, taskObj, save}) => {
     )}
   </div>
 
-  <div className="col-6">
+  <div className="col-5">
     <input
       type="text"
       className={
@@ -180,9 +180,9 @@ const EditTaskPopup = ({modal, toggle, updateTask, taskObj, save}) => {
       <div className="invalid-feedback">{item.errors.Količina}</div>
     )}
   </div>
-  <div className="col">
+  <div className="col-1">
   <button
-    className="btn btn-outline-warning"
+    className="btn btn-outline-secondary"
     onClick={(e) => handleRemoveField(e, index)}
   >
     x
