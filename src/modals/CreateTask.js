@@ -127,7 +127,7 @@ const CreateTaskPopup = ({modal, toggle, save}) => {
                     </div>
                     <div className = "form-group">
                         <label>Opis</label>
-                        <textarea rows = "5" className = "form-control" value = {description} onChange = {handleChange} name = "description"></textarea>
+                        <textarea rows = "3" className = "form-control" value = {description} onChange = {handleChange} name = "description"></textarea>
                     </div>
                     
                     <div className="form-group">
@@ -175,9 +175,9 @@ const CreateTaskPopup = ({modal, toggle, save}) => {
                 <div className="invalid-feedback">{item.errors.Količina}</div>
               )}
             </div>
-            <div className="col">
+            <div className="col-1">
             <button
-              className="btn btn-outline-warning"
+              className="btn btn-outline-secondary"
               onClick={(e) => handleRemoveField(e, index)}
             >
               x
