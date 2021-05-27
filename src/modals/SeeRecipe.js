@@ -1,18 +1,23 @@
 import React, { useState , useEffect} from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
+
+
 const RecipePopup = ({modal2, toggle2, taskObj}) => {
     const [taskName, setTaskName] = useState('');
     const [description, setDescription] = useState('');
-    const [Sastojak, setSastojak] = useState('');
+    const [sastojci, setSastojci] = useState('');
+    
+    
     
     
 
     useEffect(() => {
         setTaskName(taskObj.Name)
         setDescription(taskObj.Description)
-        setSastojak(taskObj.Sastojak)
-       
+        setSastojci(taskObj.Sastojci)
+        
+        
     },[])
 
    
@@ -24,17 +29,19 @@ const RecipePopup = ({modal2, toggle2, taskObj}) => {
             
                     <div className = "form-group">
                         <label><b>Naziv recepta:</b></label>
-                        <label> {taskName}</label>
+                        <label>{taskName}</label>
                     </div>
                     <div className = "form-group">
                         <label><b>Opis:</b></label>
-                        <label>{description} </label>
+                        <pre>{description}</pre>
                     </div>
                     <div className = "form-group">
                         <label><b>Sastojci:</b></label>
-                        <ol> {Sastojak}
-                        </ol>
+                        <pre>{sastojci}</pre>
+                        
                     </div>
+
+                    
                 
             </ModalBody>
             <ModalFooter>

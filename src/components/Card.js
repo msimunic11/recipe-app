@@ -4,6 +4,7 @@ import ReactTooltip from 'react-tooltip';
 import SeeRecipe from '../modals/SeeRecipe'
 
 
+
 const Card = ({taskObj, index, deleteTask, updateListArray}) => {
     const [modal, setModal] = useState(false);
     const [modal2, setModal2] = useState(false);
@@ -47,8 +48,9 @@ const Card = ({taskObj, index, deleteTask, updateListArray}) => {
     const handleDelete = () => {
         deleteTask(index)
     }
-
-    
+    const ratingChanged = (newRating) => {
+        console.log(newRating);
+      };
 
     return (
         <div class = "card-wrapper mr-5">
@@ -58,6 +60,7 @@ const Card = ({taskObj, index, deleteTask, updateListArray}) => {
                 <ReactTooltip id='recept' type='success'>
   <span>Pogledaj recept</span>
 </ReactTooltip>
+
 
                 <div style={{"position": "absolute", "right" : "20px", "bottom" : "20px"}}>
                     <i class = "far fa-edit mr-3" style={{"color" : colors[index%5].primaryColor, "cursor" : "pointer"}} onClick = {() => setModal(true)}></i>

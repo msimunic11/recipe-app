@@ -62,19 +62,15 @@ const TodoList = () => {
                        <a href="#top"><li className="right"><i className="fas fa-sign-in-alt"></i></li></a>
                        
                    </ul>
-                   
-                   
+                                     
                </div>
                
-        
-                            <div className="col text-center">
-                            
-
-                            <i className = "fas fa-plus-circle fa-3x" data-tip data-for="dodajrecept" onClick = {() => setModal(true)} />
+                                    <div className="col text-center">
+                                          <i className = "fas fa-plus-circle fa-3x" data-tip data-for="dodajrecept" onClick = {() => setModal(true)} />
                             <ReactTooltip id='dodajrecept' type='success'>
-  <span>Dodaj recept</span>
-</ReactTooltip>
-                            </div>
+                                 <span>Dodaj recept</span>
+                            </ReactTooltip>
+                                     </div>
                             
 
                              
