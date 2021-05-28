@@ -52,17 +52,19 @@ const EditTaskPopup = ({modal, toggle, updateTask, taskObj}) => {
                         <input type="text" className = "form-control" value = {taskName} onChange = {handleChange} name = "taskName"/>
                         
                     </div>
+
+                    <div className="form-group">
+         
+         <label>Sastojci</label>
+            <textarea rows = "5" placeholder="sastojke odvoji klikom na enter" className = "form-control" value = {sastojci} onChange = {handleChange} name = "sastojci"></textarea>
+     </div>
                     <div className = "form-group">
                         <label>Priprema</label>
                         <textarea rows = "3" placeholder="korake pripreme odvoji klikom na enter" className = "form-control" value = {description} onChange = {handleChange} name = "description"></textarea>
                     </div>
             
                     
-                    <div className="form-group">
-         
-                        <label>Sastojci</label>
-                           <textarea rows = "5" placeholder="sastojke odvoji klikom na enter" className = "form-control" value = {sastojci} onChange = {handleChange} name = "sastojci"></textarea>
-                    </div>
+                   
 
             </ModalBody>
             <ModalFooter>
