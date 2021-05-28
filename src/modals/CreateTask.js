@@ -5,6 +5,7 @@ import ReactStars from "react-rating-stars-component";
 import { SettingsOverscanOutlined } from '@material-ui/icons';
 import { render } from '@testing-library/react';
 
+
 const { Component } =  React;
 
 
@@ -15,8 +16,7 @@ const CreateTaskPopup = ({modal, toggle, save})  => {
     const [sastojci, setSastojci] = useState('');
     
     
-    
-         
+            
     const handleChange = (e) => {
                
         
@@ -51,28 +51,29 @@ const CreateTaskPopup = ({modal, toggle, save})  => {
             <ModalBody>
             
                     <div className = "form-group">
-                        <label>Naziv</label>
-                        <input type="text" className = "form-control" value = {taskName} onChange = {handleChange} name = "taskName"/>
+                        <label>Naziv:</label>
+                        <input type="text" className = "form-control" value = {taskName} onChange = {handleChange} name = "taskName" required/>
                         
                     </div>
                     <div className = "form-group">
-                        <label>Opis</label>
+                        <label>Priprema:</label>
                         <textarea rows = "3" placeholder="korake pripreme odvoji klikom na enter" className = "form-control" value = {description} onChange = {handleChange} name = "description"></textarea>
                     </div>
             
                     
                     <div className="form-group">
          
-                        <label>Sastojci</label>
+                        <label>Sastojci:</label>
                            <textarea rows = "5" placeholder="sastojke odvoji klikom na enter" className = "form-control" value = {sastojci} onChange = {handleChange} name = "sastojci"></textarea>
                     </div>
 
-                                                     
+                                              
                     
             </ModalBody>
             <ModalFooter>
-            <Button color="primary" onClick={handleSave}>Dodaj</Button>{' '}
+            <Button color="success" onClick={handleSave}>Dodaj</Button>{' '}
             <Button color="outline-secondary" onClick={toggle}>Poništi</Button>
+            
             </ModalFooter>
       </Modal>
       

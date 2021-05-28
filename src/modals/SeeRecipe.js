@@ -24,19 +24,15 @@ const RecipePopup = ({modal2, toggle2, taskObj}) => {
 
     return (
         <Modal isOpen={modal2} toggle2={toggle2}>
-            <ModalHeader toggle2={toggle2}>Recept</ModalHeader>
+            <ModalHeader toggle2={toggle2}>-{taskName}-</ModalHeader>
             <ModalBody>
             
-                    <div className = "form-group">
-                        <label><b>Naziv recepta:</b></label>
-                        <label>{taskName}</label>
-                    </div>
-                    <div className = "form-group">
-                        <label><b>Opis:</b></label>
+                                       <div className = "form-group">
+                        <label><b>PRIPREMA:</b></label>
                         <pre>{description}</pre>
                     </div>
                     <div className = "form-group">
-                        <label><b>Sastojci:</b></label>
+                        <label><b>SASTOJCI:</b></label>
                         <pre>{sastojci}</pre>
                         
                     </div>

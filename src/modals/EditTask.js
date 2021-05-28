@@ -36,7 +36,7 @@ const EditTaskPopup = ({modal, toggle, updateTask, taskObj}) => {
         let tempObj = {}
         tempObj['Name'] = taskName
         tempObj['Description'] = description
-        taskObj['Sastojci'] = sastojci
+        tempObj['Sastojci'] = sastojci
         updateTask(tempObj)
     }
 
@@ -53,7 +53,7 @@ const EditTaskPopup = ({modal, toggle, updateTask, taskObj}) => {
                         
                     </div>
                     <div className = "form-group">
-                        <label>Opis</label>
+                        <label>Priprema</label>
                         <textarea rows = "3" placeholder="korake pripreme odvoji klikom na enter" className = "form-control" value = {description} onChange = {handleChange} name = "description"></textarea>
                     </div>
             
@@ -66,8 +66,9 @@ const EditTaskPopup = ({modal, toggle, updateTask, taskObj}) => {
 
             </ModalBody>
             <ModalFooter>
-            <Button color="primary" onClick={handleUpdate}>Promijeni</Button>{' '}
+            <Button color="success" onClick={handleUpdate}>Promijeni</Button>{' '}
             <Button color="outline-secondary" onClick={toggle}>Poništi</Button>
+            
             </ModalFooter>
       </Modal>
     );
