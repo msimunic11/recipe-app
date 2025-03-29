@@ -86,7 +86,7 @@ const TodoList = () => {
             
             <footer className="text-center text-lg-start mt-5">
   <div className="text-center p-5">
-  Moji recepti © 2021 Copyright 
+  Moji recepti © 2025 Copyright 
   </div>
 </footer>
 
